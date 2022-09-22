@@ -1,0 +1,16 @@
+name: Example workflow for release x.y.z
+
+on:
+  push:
+    branches:
+      - release-x.y.z
+  pull_request:
+    branches:
+      - release-x.y.z
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+    - uses: actions/checkout@v3
+    - run: echo hello world
